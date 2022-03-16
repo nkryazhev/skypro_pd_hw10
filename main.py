@@ -42,10 +42,10 @@ class Candidate:
         self.gender = gender
         self.age = age
         self.skills = skills
-        self.skills_set = set(self.skills.split(', '))
+        self.skills_set = set(self.skills.lower().split(', '))
 
     def has_skill(self, skill_name):
-        return skill_name in self.skills_set
+        return skill_name.lower() in self.skills_set
 
 
 candidateDB = CandidateFactory()
